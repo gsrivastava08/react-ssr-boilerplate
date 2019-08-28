@@ -1,0 +1,32 @@
+{
+  "name": "react-ssr-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/server.js",
+  "scripts": {
+    "build-client:prod": "webpack --config webpack-client.config.js --mode production",
+    "client:dev": "webpack --config webpack-client.config.js --mode development -w",
+    "server:dev": "babel-node lib/server.js",
+    "build-node:prod": "babel lib -d build --copy-files",
+    "build": "npm run build-client:prod && npm run build-node:prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gsrivastava08",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
+}
