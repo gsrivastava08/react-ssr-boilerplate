@@ -5,9 +5,9 @@
   "main": "lib/server.js",
   "scripts": {
     "build-client:prod": "webpack --config webpack-client.config.js --mode production",
+    "build-node:prod": "webpack --config webpack-server.config.js --mode production",
     "client:dev": "webpack --config webpack-client.config.js --mode development -w",
     "server:dev": "babel-node lib/server.js",
-    "build-node:prod": "babel lib -d build --copy-files",
     "build": "npm run build-client:prod && npm run build-node:prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,8 @@
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -26,12 +27,16 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-transform-import-css": "^1.0.0-alpha.11",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
     "css-loader": "^3.2.0",
+    "ignore-loader": "^0.1.2",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.3.1",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.7",
+    "webpack-node-externals": "^1.7.2"
   }
 }

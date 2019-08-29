@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const isDevelopment = process.env.NODE_ENV === 'development';
 const config = {
+    externals: ["react-helmet"],
     entry: ['./lib/renderer/ClientRenderer.js'],
     output: {
         path: path.resolve(__dirname, 'public'),
