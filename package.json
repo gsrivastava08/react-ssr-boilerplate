@@ -1,7 +1,7 @@
 {
   "name": "react-ssr-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "react-ssr-boilerplate",
   "main": "lib/server.js",
   "scripts": {
     "build-client:prod": "webpack --config webpack-client.config.js --mode production",
